@@ -1,0 +1,26 @@
+sim_seconds                                  0.018898                       # Number of seconds simulated
+system.cpu.branchPred.condPredicted           2901338                       # Number of conditional branches predicted
+system.cpu.branchPred.condIncorrect            273882                       # Number of conditional branches incorrect
+system.cpu.numCycles                         37795437                       # number of cpu cycles simulated
+system.cpu.commit.op_class_0::No_OpClass         2198      0.01%      0.01% # Class of committed instruction
+system.cpu.commit.op_class_0::IntAlu         17865666     87.44%     87.45% # Class of committed instruction
+system.cpu.commit.op_class_0::IntMult          501447      2.45%     89.91% # Class of committed instruction
+system.cpu.commit.op_class_0::IntDiv               21      0.00%     89.91% # Class of committed instruction
+system.cpu.commit.op_class_0::FloatAdd             10      0.00%     89.91% # Class of committed instruction
+system.cpu.commit.op_class_0::SimdAdd            3794      0.02%     89.93% # Class of committed instruction
+system.cpu.commit.op_class_0::SimdAlu             658      0.00%     89.93% # Class of committed instruction
+system.cpu.commit.op_class_0::SimdCvt             314      0.00%     89.93% # Class of committed instruction
+system.cpu.commit.op_class_0::SimdMisc           6965      0.03%     89.97% # Class of committed instruction
+system.cpu.commit.op_class_0::SimdMult           3360      0.02%     89.98% # Class of committed instruction
+system.cpu.commit.op_class_0::SimdShift           512      0.00%     89.99% # Class of committed instruction
+system.cpu.commit.op_class_0::MemRead         1021789      5.00%     94.99% # Class of committed instruction
+system.cpu.commit.op_class_0::MemWrite        1013248      4.96%     99.95% # Class of committed instruction
+system.cpu.commit.op_class_0::FloatMemRead         7422      0.04%     99.98% # Class of committed instruction
+system.cpu.commit.op_class_0::FloatMemWrite         3667      0.02%    100.00% # Class of committed instruction
+system.cpu.commit.op_class_0::total          20431071                       # Class of committed instruction
+system.cpu.ipc                               0.326486                       # IPC: Instructions Per Cycle
+system.cpu.ipc_total                         0.326486                       # IPC: Total IPC of All Threads
+system.cpu.dcache.overall_miss_rate::total     0.000309                       # miss rate for overall accesses
+system.cpu.icache.overall_miss_rate::total     0.000361                       # miss rate for overall accesses
+system.l2cache.overall_miss_rate::total      0.997564                       # miss rate for overall accesses
+system.l3cache.overall_miss_rate::total             1                       # miss rate for overall accesses

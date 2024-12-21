@@ -176,7 +176,7 @@ class MyO3CPU(DerivO3CPU):
 ############################################################
 
     fetchWidth    =  2 # Fetch width
-    decodeWidth   =  2 # Decode width
+    decodeWidth   =  1 # Decode width => Config1: changed from 2 to 1
     renameWidth   =  2 # Rename width
     dispatchWidth =  2 # Dispatch width
     issueWidth    =  2 # Issue width
