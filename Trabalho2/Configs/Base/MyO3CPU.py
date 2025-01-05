@@ -50,12 +50,12 @@ from m5.objects import SystemXBar
 ###############################################################################
 
 class MyIntALU(FUDesc):
-    opList = [ OpDesc(opClass='IntAlu', opLat = 3) ] # increased from 1 to 3
+    opList = [ OpDesc(opClass='IntAlu') ]
     count = 2
 
 class MyIntMultDiv(FUDesc):
-    opList = [ OpDesc(opClass='IntMult', opLat=9, pipelined=True), # increased from 5 to 9
-               OpDesc(opClass='IntDiv', opLat=32, pipelined=False) ] # increased from 16 to 32
+    opList = [ OpDesc(opClass='IntMult', opLat=3, pipelined=True),
+               OpDesc(opClass='IntDiv', opLat=16, pipelined=False) ]
 
     # DIV and IDIV instructions in x86 are implemented using a loop which
     # issues division microops.  The latency of these microops should really be
@@ -74,8 +74,8 @@ class My_FP_ALU(FUDesc):
 
 class My_FP_MultDiv(FUDesc):
     opList = [ OpDesc(opClass='FloatMult', opLat=4),
-               OpDesc(opClass='FloatDiv',  opLat=12, pipelined=False), 
-               OpDesc(opClass='FloatSqrt', opLat=24, pipelined=False) ] 
+               OpDesc(opClass='FloatDiv',  opLat=12, pipelined=False),
+               OpDesc(opClass='FloatSqrt', opLat=24, pipelined=False) ]
     count = 1
 
 class My_SIMD_Unit(FUDesc):
@@ -176,7 +176,7 @@ class MyO3CPU(DerivO3CPU):
 ############################################################
 
     fetchWidth    =  2 # Fetch width
-    decodeWidth   =  1 # Decode width => Config1: changed from 2 to 1
+    decodeWidth   =  2 # Decode width
     renameWidth   =  2 # Rename width
     dispatchWidth =  2 # Dispatch width
     issueWidth    =  2 # Issue width

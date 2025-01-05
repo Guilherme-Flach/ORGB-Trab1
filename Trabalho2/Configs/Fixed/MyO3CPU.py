@@ -67,15 +67,15 @@ class MyIntMultDiv(FUDesc):
     count = 1
 
 class My_FP_ALU(FUDesc):
-    opList = [ OpDesc(opClass='FloatAdd', opLat=2),
-               OpDesc(opClass='FloatCmp', opLat=2),
-               OpDesc(opClass='FloatCvt', opLat=2) ]
+    opList = [ OpDesc(opClass='FloatAdd', opLat=4), # increased from 2 to 4
+               OpDesc(opClass='FloatCmp', opLat=4), # increased from 2 to 4
+               OpDesc(opClass='FloatCvt', opLat=4) ] # increased from 2 to 4
     count = 1
 
 class My_FP_MultDiv(FUDesc):
     opList = [ OpDesc(opClass='FloatMult', opLat=4),
-               OpDesc(opClass='FloatDiv',  opLat=12, pipelined=False), 
-               OpDesc(opClass='FloatSqrt', opLat=24, pipelined=False) ] 
+               OpDesc(opClass='FloatDiv',  opLat=12, pipelined=False),
+               OpDesc(opClass='FloatSqrt', opLat=24, pipelined=False) ]
     count = 1
 
 class My_SIMD_Unit(FUDesc):
